@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import tw from 'twin.macro'
 
 export const Wrapper = styled.main`
   background-color: #06092b;
@@ -19,7 +20,12 @@ export const Logo = styled.img`
 `
 
 export const Title = styled.h1`
-  font-size: 2.5rem;
+  ${tw`
+    text-3xl 
+    font-bold 
+    tracking-tight 
+    text-gray-900
+  `}
 `
 
 export const Description = styled.h2`

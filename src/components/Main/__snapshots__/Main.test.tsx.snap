@@ -31,7 +31,15 @@ exports[`<Main /> should render the heading 1`] = `
 }
 
 .c2 {
-  font-size: 2.5rem;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 700;
+  -webkit-letter-spacing: -0.025em;
+  -moz-letter-spacing: -0.025em;
+  -ms-letter-spacing: -0.025em;
+  letter-spacing: -0.025em;
+  --tw-text-opacity: 1;
+  color: rgba(17,24,39,var(--tw-text-opacity));
 }
 
 .c3 {

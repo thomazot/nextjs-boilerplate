@@ -1,4 +1,5 @@
 module.exports = {
+  verbose: true,
   testEnvironment: 'jsdom',
   testPathIgnorePatterns: ['/node_modules/', '/.next/'],
   collectCoverage: true,
