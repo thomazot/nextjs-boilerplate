@@ -1,14 +1,15 @@
 import Head from 'components/Head'
+import * as S from './Layout.styles'
 
 type LayoutProps = {
   children?: React.ReactNode | React.ReactNode[]
 }
 
 const Layout: React.FC<LayoutProps> = ({ children }) => (
-  <div className="min-h-full">
+  <S.Wrapper>
     <Head />
     {children}
-  </div>
+  </S.Wrapper>
 )
 
 export default Layout
