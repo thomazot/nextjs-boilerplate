@@ -18,7 +18,7 @@ const WrapperProvider: React.FC<{
 const customRender = (
   ui: ReactElement,
   { ...renderOptions }: CustomRenderProps = {}
-) => render(<WrapperProvider>ui</WrapperProvider>, renderOptions)
+) => render(<WrapperProvider>{ui}</WrapperProvider>, renderOptions)
 
 function customRenderHook<T>(useCustom: () => T) {
   return renderHook(() => useCustom(), { wrapper: WrapperProvider })

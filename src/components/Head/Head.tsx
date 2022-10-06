@@ -1,7 +1,7 @@
 import NextHead from 'next/head'
 import { useHead } from 'hooks/useHead'
 
-const Head = () => {
+const Head: React.FC = () => {
   const { head } = useHead()
 
   return (
