@@ -1,6 +1,16 @@
 module.exports = {
-  stories: ['../src/components/**/*stories.tsx'],
-  addons: ['@storybook/addon-essentials', '@storybook/addon-postcss', 'storybook-addon-next-router'],
+  stories: ['../src/components/**/*stories.tsx', '../src/templates/**/*stories.tsx', '../src/common/**/*stories.tsx'],
+  addons: ['@storybook/addon-essentials', {
+    name: '@storybook/addon-postcss',
+    options: {
+      cssLoaderOptions: {
+        importLoaders: 1,
+      },
+      postcssLoaderOptions: {
+        implementation: require('postcss'),
+      },
+    },
+  }, 'storybook-addon-next-router'],
   babel: async (options) => ({
     ...options,
     plugins: [
