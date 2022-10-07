@@ -1,5 +1,10 @@
 import { ReactElement } from 'react'
-import { render, renderHook, RenderOptions } from '@testing-library/react'
+import {
+  render,
+  renderHook,
+  RenderHookResult,
+  RenderOptions
+} from '@testing-library/react'
 
 import { ThemeProvider } from 'styled-components'
 import theme from 'styles/theme'
@@ -20,7 +25,9 @@ const customRender = (
   { ...renderOptions }: CustomRenderProps = {}
 ) => render(<WrapperProvider>{ui}</WrapperProvider>, renderOptions)
 
-function customRenderHook<T>(useCustom: () => T) {
+function customRenderHook<Result, Props>(
+  useCustom: (initialProps?: Props) => Result
+): RenderHookResult<Result, Props> {
   return renderHook(() => useCustom(), { wrapper: WrapperProvider })
 }
 

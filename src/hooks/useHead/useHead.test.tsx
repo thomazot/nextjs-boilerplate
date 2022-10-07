@@ -1,19 +1,14 @@
 import { initialState } from 'stores/reducer'
-import { renderHook } from 'utils/test-utils'
 import { useHead } from '.'
+import { renderHook, act } from 'utils/test-utils'
 
 describe('Hooks/useHead', () => {
   it('should head title', () => {
-    const {
-      result: {
-        current: { head, actions }
-      }
-    } = renderHook(useHead)
+    const { result } = renderHook(useHead)
 
-    expect(head.title).toEqual(initialState.head.title)
+    expect(result.current.head.title).toBe(initialState.head.title)
 
-    actions.add({ title: 'Title Default' })
-
-    expect(head.title).toEqual('Title Default')
+    act(() => result.current.actions.add({ title: 'Title Default Testing' }))
+    expect(result.current.head.title).toBe('Title Default Testing')
   })
 })
