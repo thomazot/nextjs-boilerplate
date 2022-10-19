@@ -6,4 +6,4 @@ export default {
   component: Layout
 } as Meta
 
-export const Default: Story = () => <Layout />
+export const Default: Story = () => <Layout>Main Container</Layout>

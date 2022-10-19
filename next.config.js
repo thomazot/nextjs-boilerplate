@@ -5,6 +5,9 @@ const nextConfig = {
   swcMinify: true,
   compiler: {
     removeConsole: isProd
+  },
+  images: {
+    domains: ['tailwindui.com']
   }
 }
 

@@ -1,4 +1,8 @@
+import Footer from 'components/Footer'
 import Head from 'components/Head'
+import Header from 'components/Header'
+import Main from 'components/Main'
+
 import * as S from './Layout.styles'
 
 type LayoutProps = {
@@ -8,7 +12,9 @@ type LayoutProps = {
 const Layout: React.FC<LayoutProps> = ({ children }) => (
   <S.Wrapper>
     <Head />
-    {children}
+    <Header />
+    <Main>{children}</Main>
+    <Footer />
   </S.Wrapper>
 )
 

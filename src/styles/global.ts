@@ -1,6 +1,12 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle, css } from 'styled-components'
 
 const GlobalStyles = createGlobalStyle`
+  ${css`
+    @tailwind base;
+    @tailwind components;
+    @tailwind utilities;
+  `}
+
   * {
     margin: 0;
     padding: 0;
@@ -9,7 +15,7 @@ const GlobalStyles = createGlobalStyle`
   html {
     font-size: 16px;
   }
-  html, body, #__next {
+  html, body, #__next, #root {
     height: 100%;
   }
   body {

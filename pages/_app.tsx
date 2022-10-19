@@ -6,8 +6,6 @@ import GlobalStyles from 'styles/global'
 import theme from 'styles/theme'
 import { StoreType } from 'stores/reducer'
 
-import 'tailwindcss/tailwind.css'
-
 function App({ Component, pageProps }: AppProps<{ initialStore?: StoreType }>) {
   return (
     <ThemeProvider theme={theme}>
